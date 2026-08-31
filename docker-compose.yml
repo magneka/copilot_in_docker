@@ -1,0 +1,12 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./source:/source
+    ports:
+      - "8080:8080"
+    command: ["sleep", "infinity"]
+    stdin_open: true
+    tty: true
